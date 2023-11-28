@@ -1,0 +1,20 @@
+﻿<Window x:Class="Pass_Manager_WPF.InfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework"
+        xmlns:local="clr-namespace:Pass_Manager_WPF"
+        mc:Ignorable="d"
+        Title="InfoWindow" Height="450" Width="800" WindowStyle="None" Left="-705" Top="1" AllowsTransparency="True" Loaded="Window_Loaded" Activated="Window_Activated" Background="Transparent" ResizeMode="NoResize" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+
+    <Grid Background="Transparent">
+        <Button x:Name="CanselWindow" Click="CanselWindow_Click" Background="#0C00CAFF" Foreground="LightBlue" FontSize="12" Content="X" Margin="762,0,0,425"/>
+        <Button x:Name="MinimizedWindow" Click="MinimizedWindow_Click" Background="#0C00CAFF" Foreground="LightBlue" FontSize="12" Content="--" Margin="723,0,38,425"/>
+        <TextBlock Text="Для выхода из SkillHand используйте Num0" TextWrapping="Wrap" Foreground="Red" FontSize="18" Margin="356,0,82,427"/>
+        <TextBlock Text="Алгоритм стандартных действий: &#x0a;1. Запустить SkillHand Portable;&#x0a;2. Зажать клавиши Num1+Num2;&#x0a;3. Ввести запрос на отправку. Это можно сделать в любом текстовом редакторе, а также в VS;&#x0a;4. Зажать клавиши Num4+Num5;&#x0a;5. Дождаться иконки OK на панели задач (или Error, в случае ошибки);&#x0a;6. Зажать клавиши Num7+Num8 и можно начинать печатать обработанный результат, нажимая случайные буквенные клавиши на клавиатуре. Для автоматического набора нажмите на NumLock (не забудьте его вернуть позже в исходное состояние)." TextWrapping="Wrap" Foreground="Red" FontSize="20" Margin="10,10,82,137"/>
+        <TextBlock Text="Альтернативные методы получения запроса:&#x0a;A. Считывает нажатия клавиш после прожатия Num1+Num2" TextWrapping="Wrap" Foreground="Red" FontSize="15" Margin="10,323,116,86"/>
+        <TextBlock Text="B. Считывает запрос из буффера обмена Windows. Копирует из буффера после прожатия Num1+Num2" TextWrapping="Wrap" Foreground="Red" FontSize="15" Margin="10,364,116,45"/>
+        <TextBlock Text="C. Считывает запрос со скриншота, который сохранён в буффере обмена. Считывание начинается после прожатия Num4+Num5" TextWrapping="Wrap" Foreground="Red" FontSize="15" Margin="10,400,116,10"/>
+    </Grid>
+</Window>
